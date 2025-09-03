@@ -5,25 +5,37 @@ info:
   description: This is a specification of STD24205
 servers:
   - url: 'http://localhost:8000'
+tags:
+  - name: Ping
+    description: return pong
+  - name: cars
+    description: Operations related to cars
 paths:
   /ping:
     get:
+      tags:
+        - Ping
       description: return a text pong
       schema:
         type: String
         example: pong
   /cars:
     post:
-          application/JSON:
-            schema:
-              type: String
-              name: identifier
-            schema:
-              type: String
-              name: brand
-            schema:
-              type: String
-              name: model
+      tags:
+        - cars
+      responses:
+        '202':
+          content:
+            application/json:
+              schema:
+                type: String
+                name: identifier
+              schema:
+                type: String
+                name: brand
+              schema:
+                type: String
+                name: model
     get:
       description:
         type:
@@ -37,17 +49,3 @@ paths:
             schema:
               type: String
               name: model
-
-
-
-
-
-
-
-
-
-
-
-
-
-
