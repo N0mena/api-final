@@ -19,7 +19,7 @@ paths:
       schema:
         type: String
         example: pong
-  /cars:
+    /cars:
     post:
       tags:
         - cars
@@ -27,6 +27,9 @@ paths:
         '202':
           content:
             application/json:
+              schema:
+                type: array
+                items:
               schema:
                 type: String
                 name: identifier
