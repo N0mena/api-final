@@ -1,0 +1,53 @@
+openapi: 3.0.3
+info:
+  title: STD24205
+  version: 1.0.0
+  description: This is a specification of STD24205
+servers:
+  - url: 'http://localhost:8000'
+paths:
+  /ping:
+    get:
+      description: return a text pong
+      schema:
+        type: String
+        example: pong
+  /cars:
+    post:
+          application/JSON:
+            schema:
+              type: String
+              name: identifier
+            schema:
+              type: String
+              name: brand
+            schema:
+              type: String
+              name: model
+    get:
+      description:
+        type:
+          application/JSON:
+            schema:
+              type: String
+              name: identifier
+            schema:
+              type: String
+              name: brand
+            schema:
+              type: String
+              name: model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
